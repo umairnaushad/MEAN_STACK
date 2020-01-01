@@ -18,3 +18,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 Step by step article on [MEAN Stack Tutorial – Angular 7 CRUD App with Bootstrap 4](https://www.positronx.io/mean-stack-tutorial-angular-7-crud-bootstrap/)
+
+## Remove extra packages
+npm install depcheck -g
+depcheck
+npm install -g npm-check-unused
+npm-check-unused
+npm cache clean --force 
