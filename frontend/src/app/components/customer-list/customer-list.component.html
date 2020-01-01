@@ -1,0 +1,32 @@
+<div class="container">
+  <p *ngIf="Customer.length <= 0" class="no-data text-center">There is no customer added yet!</p>
+  <table class="table table-bordered" *ngIf="Customer.length > 0">
+    <thead class="table-success">
+      <tr>
+        <th scope="col">Customer ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Category</th>
+        <th scope="col">Phone No</th>
+        <th scope="col center">Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of Customer; let i = index">
+        <th scope="row">{{customer._id}}</th>
+        <td>{{customer.name}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.category}}</td>
+        <td>{{customer.phoneNumber}}</td>
+        <td class="text-center edit-block">
+          <span class="edit" [routerLink]="['/edit-customer/', customer._id]">
+            <button type="button" class="btn btn-success btn-sm">Edit</button>
+          </span>
+          <span class="delete" (click)="removeCustomer(customer, i)">
+            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
