@@ -4,7 +4,7 @@
 - To start angular application: `npm install` and `ng serve -o --port 4201`
 - Navigate to `http://localhost:4201/`
 
-## To execute on AWS EC2 instance?
+## To execute on AWS EC2 instance
 ng serve --host 0.0.0.0 --disable-host-check
 
 ## Build
